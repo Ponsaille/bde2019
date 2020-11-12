@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box; 
+}
+
+html, body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  margin: 0 auto;
+  background-color: transparent;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.liste {
+  height:100%;
+  overflow:hidden;
+  position: absolute;
+}
+
+.liste img {
+  height:100%;
+}
+
+#votebox {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#votebox a {
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+
+.genesistext {
+  color: #e29abb;
+}
+
+.unchainedtext {
+  color: #f68b01;
+}
+
+a {
+  color: inherit;
+}
+
+.colink {
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 700px) {
+
+  /* L'overlay couvre tout l'écran sur un écran réduit */
+  .flip-card {
+    width: 75vw;
+    height: 75vw;
+  }
+
+  #votebox {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  #votebox span {
+    margin-top: 10px; 
+  }
+}

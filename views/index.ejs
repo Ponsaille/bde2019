@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="liste" style="width:<%= geneScore %>%;">
+          <img src="/images/genesis.png">
+        </div>
+        <div class="liste" style="right:0;width:<%= 100 - geneScore %>%;border-left: 2px solid dodgerblue">
+          <img src="/images/unchained_clean.png" style="float:right;">
+        </div>
+      </div>
+    </div>
+    <% if (session.userId) { %>
+      <div id="votebox">
+        <span class="genesistext">
+          <a href="increment/genesis">J'aime le rozzze *.*</a><br>
+          Votes : <%= scores.genesis.votes  %><br>
+          Score de liste : <%= scores.genesis.score  %><br>
+          <%= geneScore %> %
+        </span>
+        <span class="unchainedtext">
+          <a href="increment/unchained">J'préfère les gansta ! piew! piew!</a><br>
+          Votes : <%= scores.unchained.votes  %><br>
+          Score de liste : <%= scores.unchained.score  %><br>
+          <%= 100 - geneScore %> %
+        </span>
+      </div>
+      <a class="colink" href="/disconnect">Se déconnecter</a>
+    <% } else { %>
+      <a class="colink" href="<%= googleLink %>">Se connecter via Google</a>
+      <div id="votebox">
+        <span class="genesistext">
+          Votes : <%= scores.genesis.votes  %><br>
+          Score de liste : <%= scores.genesis.score  %><br>
+          <%= geneScore %> %
+        </span>
+        <span class="unchainedtext">
+          Votes : <%= scores.unchained.votes  %><br>
+          Score de liste : <%= scores.unchained.score  %><br>
+          <%= 100 - geneScore %> %
+        </span>
+      </div>
+    <% } %>
+  </body>
+</html>
