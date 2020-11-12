@@ -1,0 +1,27 @@
+{
+  "name": "bde2019",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon --legacy-watch ./bin/www --watch ."
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "express-session": "^1.16.1",
+    "googleapis": "^39.2.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.5.0",
+    "sequelize-cli": "^5.4.0",
+    "sqlite3": "^4.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
